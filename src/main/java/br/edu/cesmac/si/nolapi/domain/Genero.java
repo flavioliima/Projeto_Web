@@ -1,10 +1,8 @@
 package br.edu.cesmac.si.nolapi.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Genero {
@@ -13,6 +11,10 @@ public class Genero {
     private Long idGenero;
     private String nome;
     private String descricao;
+
+    @OneToMany(mappedBy = "genero")
+    private List<Filme> filmes;
+
 
     public Genero(){
 
