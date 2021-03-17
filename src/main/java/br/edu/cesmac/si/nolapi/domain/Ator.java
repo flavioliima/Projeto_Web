@@ -20,6 +20,14 @@ public class Ator {
     public Ator() {
     }
 
+    public Ator(Long idAutor, String nome, Date dataNascimento, String sexo, String biografia){
+        this.idAutor = idAutor;
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.sexo = sexo;
+        this.biografia = biografia;
+    }
+
     public Long getIdAutor() {
         return idAutor;
     }

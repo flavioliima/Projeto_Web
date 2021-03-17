@@ -4,12 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class Genero {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdGenero;
+    private Long idGenero;
     private String nome;
     private String descricao;
 
@@ -17,12 +18,18 @@ public class Genero {
 
     }
 
+    public Genero(Long idGenero, String nome, String descricao){
+        this.idGenero = idGenero;
+        this.nome = nome;
+        this.descricao = descricao;
+    }
+
     public Long getIdGenero() {
-        return IdGenero;
+        return idGenero;
     }
 
     public void setIdGenero(Long idGenero) {
-        IdGenero = idGenero;
+        idGenero = idGenero;
     }
 
     public String getNome() {
