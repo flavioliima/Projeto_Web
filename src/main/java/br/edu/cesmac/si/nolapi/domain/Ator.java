@@ -17,6 +17,7 @@ public class Ator {
     private String sexo;
     private String biografia;
 
+
     public Ator() {
     }
 
